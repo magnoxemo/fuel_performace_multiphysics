@@ -15,6 +15,10 @@ def Sn_quadrature(n):
         raise ValueError("Did not converge within the maximum number of iterations")
 
     x=np.linspace(-1,1,n)
+    """this program only works when n is n=2
+    
+    I think the main reason is the polynomial solver. And the problem is caused by the initial guess.
+    aparently the solution of legendre polynomial --> nodes aren't unifromly distributed within the interval of [-1,1] """
     angles=np.zeros(n)
     weights=np.zeros(n)
     for _ in range(n):
